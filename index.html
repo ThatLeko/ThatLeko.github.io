@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leko</title>
+        <link rel="icon" type="image/png" href="assets/lekoprof.png">
+    </head>
+<body style="text-align: center">
+
+    <!-- Logo and socials-->
+    <div class="bg-img"></div>
+    <div class="box top-box" style="margin-top: 45px">
+        <div>
+            <div class="list-box">
+                <img src="assets/lekoprof.png" class="circle-img">
+                <img src="assets/lekosoft.png" width="250" height=auto>
+            </div>
+            <p style="margin: 5px 0px 0px 0px; text-align: center; font-family: 'Lato'; font-size: 20px; color: #EBD0F4;">Developer, Composer, Artist</p>
+        </div>
+        <div>
+            <div class="list-box">
+                <a title="E-mail" target="_blank" href="mailto:lekogames20@gmail.com"><img class="card social-icon" src="./assets/social/email.png" alt="E-mail"></a>
+                <a title="Twitter" target="_blank" href="https://x.com/ThatLeko"><img class="card social-icon" src="./assets/social/twitter.png" alt="Twitter"></a>
+                <a title="YouTube" target="_blank" href="https://www.youtube.com/@leko8873"><img class="card social-icon" src="./assets/social/youtube.png" alt="YouTube"></a>
+                
+            </div>
+            <div class="list-box", style="margin-top: 28px;">
+                <a title="Itch.io" target="_blank" href="https://leko20.itch.io/"><img class="card social-icon" src="./assets/social/itchio.png" alt="Itch.io"></a>
+                <a title="Github" target="_blank" href="https://github.com/ThatLeko"><img class="card social-icon" src="./assets/social/github.png" alt="Github"></a>
+                <a title="Bandcamp" target="_blank" href="https://thatleko.bandcamp.com/"><img class="card social-icon" src="./assets/social/bandcamp.png" alt="Bandcamp"></a>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Description -->
+    <div class="box" style="margin-top: 45px">
+        <pre class="big-text" style="margin-bottom: 0px">
+Hello! I'm Leko.
+I make games and music as well as some
+other things. Thanks for stopping by!</pre>
+    </div>
+
+    <!-- Works List -->
+    <div class="box">
+        <p class="big-text" style="margin-bottom: 10px;">Works</p>
+        <div class="list-box">
+            <div class="tab active" onclick="showTab(0)">Game Dev</div>
+            <div class="tab" onclick="showTab(1)">Music</div>
+            <div class="tab" onclick="showTab(2)">Art</div>
+        </div>
+
+        <!-- games -->
+        <div class="tab-content active">
+            <div class="box">
+                <p class="big-text" style="font-size: 25px; margin-top: 0px; margin-bottom: 20px;">Full Releases</p>
+
+                <!-- flip of light -->
+                <div class="card work-link" onclick="openPopup(
+                    'Flip of Light (2023)',
+                    'A precision platformer where you can instantaneously flip from ceiling to floor. Run, jump, and flip your way through difficult and vibrant stages, each themed around a pair of complementary colors. Master a constant barrage of new level mechanics, each designed around your flip ability.',
+                    'assets/works/fol.webm',
+                    [{ text: 'Steam', url: `https://store.steampowered.com/app/2015460/Flip_of_Light/` },{ text: 'Itch.io', url: `https://leko20.itch.io/flip-of-light` }]);">
+
+                    <div class="work">
+                        <p class="work-title">Flip of Light (2023)</p>
+                        <p class="work-desc-short">Precision Platformer</p>
+                        <img class="work-img" src="assets/works/fol.png">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="box">
+                <p class="big-text" style="font-size: 25px; margin-top: 0px; margin-bottom: 20px;">Smaller Games</p>
+
+                <!-- restless wing syndrome -->
+                <div class="card work-link" onclick="openPopup(
+                    'Restless Wing Syndrome (2020)',
+                    'Winner of the GMTK Game Jam 2020, the largest ever game jam at the time. Precision puzzle-platformer where you automatically jump on a timer.',
+                    'assets/works/rws.webm',
+                    [{text: 'Itch.io', url: `https://leko20.itch.io/restless-wing-syndrome`}]);">
+
+                    <div class="work">
+                        <p class="work-title">Restless Wing Syndrome (2020)</p>
+                        <p class="work-desc-short">Puzzle-platformer, GMTK Jam Winner</p>
+                        <video class="work-img-small" src="assets/works/rws.webm" autoplay loop muted playsinline></video>
+                    </div>
+                </div>
+
+                <!-- maze of mini-taur -->
+                <div class="card work-link" onclick="openPopup(
+                    'Maze of the Mini-taur (2021)',
+                    'Make your way through the labyrinth while you manipulate its very rooms! Submission to the GMTK 2021 Game Jam, ranked #5 overall. Developed in a team of six, acted as main programmer.',
+                    'assets/works/motmt.webm',
+                    [{text: 'Itch.io', url: `https://z-richman.itch.io/maze-of-the-mini-taur`}]);">
+
+                    <div class="work">
+                        <p class="work-title">Maze of the Mini-taur (2021)</p>
+                        <p class="work-desc-short">Puzzle-platformer, GMTK Jam Submission</p>
+                        <video class="work-img-small" src="assets/works/motmt.webm" autoplay loop muted playsinline></video>
+                    </div>
+                </div>
+
+                <!-- <div class="card work-link" target="_blank" onclick="openPopup('Sync Wars (2021)','A puzzle-action game where enemies only move when you do. Position yourself to attack them while keeping track of their movement, and do it before your time runs out! Submission to the 2021 Opera GX Game Jam, placing in the top 100.','assets/sw.png');">
+                    <div class="work">
+                        <p class="work-title">Sync Wars (2021)</p>
+                        <p class="work-desc-short">Puzzle-action game, Opera GX Jam Submission</p>
+                        <img class="work-img-small" src="assets/sw.png">
+                    </div>
+                </div> -->
+
+                <!-- tweak and destroy -->
+                <div class="card work-link" target="_blank" onclick="openPopup(
+                'Tweak and Destroy (2024)',
+                'A hectic turn-based, top-down shooter where defeating enemies scales the variables of the game! Submission to the GMTK 2024 Game Jam. Developed in a team of five. Acted as composer, programmer, and artist.',
+                'assets/rs.webm',
+                [{text: 'Itch.io', url: `https://antidissmist.itch.io/tweak-and-destroy`}]);">
+                    <div class="work">
+                        <p class="work-title">Tweak and Destroy (2024)</p>
+                        <p class="work-desc-short">Turn-based top-down shooter, GMTK Jam Submission</p>
+                        <img class="work-img-small" src="assets/works/tad.png">
+                    </div>
+                </div>
+                
+                <!-- relyscraper -->
+                <div class="card work-link" target="_blank" onclick="openPopup(
+                    'Relyscraper (2019)',
+                    'Puzzle-platformer where you must maneuver both your character and the platform on which you stand, relying on only one platform to reach each goal. Submission to the GMTK 2019 Game Jam, ranked #95 overall.',
+                    'assets/works/rs.webm',
+                    [{text: 'Itch.io', url: `https://leko20.itch.io/relyscraper`}]);">
+
+                    <div class="work">
+                        <p class="work-title">Relyscraper (2019)</p>
+                        <p class="work-desc-short">Puzzle-platformer, GMTK Jam Submission</p>
+                        <video class="work-img-small" src="assets/works/rs.webm" autoplay loop muted playsinline></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- music -->
+        <div class="tab-content">
+            <p class="big-text" style="font-size: 25px; margin-top: 20px; margin-bottom: 20px;">This page is under construction...</p>
+        </div>
+
+        <!-- art -->
+        <div class="tab-content">
+            <p class="big-text" style="font-size: 25px; margin-top: 20px; margin-bottom: 20px;">This page is under construction...</p>
+        </div>
+
+    </div>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+        <div style="margin-top: 10px; margin-bottom: 20px;">
+            <p id="popup-title" class="big-text" style="margin-top: 0px; margin-bottom: 10px;"></p>
+            <div id="link-list" class="list-box"></div>
+            <button class="close-btn" onclick="closePopup();">&times;</button>
+        </div>
+        <video id="popup-img" class="popup-img" autoplay loop muted playsinline></video>
+        <p id="popup-desc" class="popup-desc"></p>
+        
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay" onclick="closePopup();"></div>
+    
+    <!-- Script import -->
+    <script src="script.js"></script>
+</body>
+</html>
