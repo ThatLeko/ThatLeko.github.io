@@ -5,7 +5,15 @@ body {
     position: relative;
     text-align: center;
     background-color: #000000;
+    min-width: 600px;
 }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .bg-img {
     background-image: url('assets/bg3.png');
     background-size: cover;
@@ -24,7 +32,7 @@ body {
 
 .circle-img {
     width: 120px;  /* Set width */
-    height: 120px; /* Set height (same as width for a perfect circle) */
+    height: auto; /* Set height (same as width for a perfect circle) */
     border-radius: 50%;
     object-fit: cover; /* Ensures the image fills the circle */
     display: block;
@@ -33,12 +41,11 @@ body {
 .box {
     width: 85%;
     border-radius: 20px;
-    margin-top: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 30px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .list-box {
@@ -49,13 +56,19 @@ body {
 }
 
 .top-box {
-    width: 900px;
+    width: 50vw;
+    min-height: 10vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
+@media screen and (max-width: 1000px) {
+    .top-box {
+        flex-direction: column;
+    }
+}
 .social-icon {
     filter: invert(100%);
     height: 50px;
@@ -72,7 +85,6 @@ body {
 }
 
 .work {
-    height: 100%;
     outline: none;
     display: flex;
     flex-direction: column;
@@ -80,20 +92,27 @@ body {
     border-radius: 15px;
     vertical-align: middle;
     background-color: rgba(0, 0, 0, 0.4);
+    margin: auto;
 }
 
 .work-link {
     display: inline-block;
     text-decoration: none !important;
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
     overflow: hidden;
     cursor: pointer;
     box-sizing: border-box;
 
     transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.work-link.large {
+    width: 100%;
+    max-width: 900px;
+}
+
+.work-link.small {
+    width: 400px;
+    margin: 10px 10px 10px 10px;
 }
 
 .work-link:hover {
@@ -119,15 +138,8 @@ body {
 }
 
 .work-img {
+    justify-content: center;
     border-radius: 15px;
-    width: 700px;
-    height: auto;
-}
-
-.work-img-small {
-    border-radius: 15px;
-    width: 400px;
-    height: auto;
 }
 
 .overlay {
@@ -205,23 +217,19 @@ body {
 }
 
 .big-text {
+    font-size: 40px;/*clamp(18px, 4vw, 40px);*/
     text-align: center;
     font-family: 'Lato';
     font-weight: bold;
-    font-size: 40px;
+
     color: white;
+    margin-top: 10px;
 }
 
 .no-scroll {
     overflow: hidden;
     height: 100vh;
 }
-
-
-
-
-
-
 
 .tab {
     font-family: 'Lato';
@@ -233,6 +241,7 @@ body {
     margin-top: 15px;
     margin-bottom: 15px;
     margin-right: 15px;
+    width: 100px;
     cursor: pointer;
 
     transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
