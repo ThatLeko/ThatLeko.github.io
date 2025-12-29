@@ -108,6 +108,7 @@ body {
 .work-link.large {
     width: 100%;
     max-width: 900px;
+    margin-bottom: 30px;
 }
 
 .work-link.small {
