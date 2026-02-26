@@ -15,7 +15,7 @@ body {
 }
 
 .bg-img {
-    background-image: url('assets/bg3.png');
+    background-image: url('assets/bg3.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
